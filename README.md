@@ -30,7 +30,7 @@
 | area_id       | integer     | null: false         |
 | date_id       | integer     | null: false         |
 | price         | string      | null: false         |
-| user          | reference   | foreign_key: true   |
+| user          | reference   | null: false,foreign_key: true   |
 
 ### Association
 
