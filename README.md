@@ -37,7 +37,7 @@
 - belongs_to :user
 - has_one :purchase
 
-## purchases table
+## orders table
 
 | Column      | Type         | Options              |
 |-------------|--------------|----------------------|
@@ -54,7 +54,7 @@
 | Column      | Type         | Options             |
 |-------------|--------------|---------------------|
 | code        | string       | null: false         |
-| prefecture  | string       | null: false         |
+| area_id     | string       | null: false         |
 | muni        | string       | null: false         |
 | address     | string       | null: false         |
 | building    | string       | null: false         |

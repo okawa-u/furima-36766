@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="3DNrw-TpFbQCMAiCIeC1" name="ページ1">
-        <mxGraphModel dx="1180" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="458" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -33,7 +33,7 @@
                 <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="9" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="&lt;b&gt;purchaseテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;user&amp;nbsp;&amp;nbsp;(referance型，NOT NULL，外部キー)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;align=left;" parent="1" vertex="1">
+                <mxCell id="9" value="&lt;b&gt;ordersテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;user&amp;nbsp;&amp;nbsp;(referance型，NOT NULL，外部キー)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;align=left;" parent="1" vertex="1">
                     <mxGeometry x="270" y="410" width="260" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="&lt;b&gt;addressテーブル&lt;br&gt;&lt;/b&gt;&lt;br&gt;code (string型，NOT NULL)&lt;br&gt;prefecture (string型，NOT NULL)&lt;br&gt;muni (string型，NOT NULL)&lt;br&gt;address (string型，NOT NULL)&lt;br&gt;building (string型，NOT NULL)&lt;br&gt;phone (string型，NOT NULL)&lt;br&gt;user&amp;nbsp;&amp;nbsp;(referance型，NOT NULL，外部キー)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;align=left;" parent="1" vertex="1">
