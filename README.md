@@ -8,7 +8,7 @@
 | email              | string      | unique: true    |
 | encrypted_password | string      | null: false     |
 | name               | string      | null: false     |
-| birth              | string      | null: false     |
+| birth              | date        | null: false     |
 | kana               | string      | null: false     |
 
 ### Association
@@ -51,7 +51,7 @@
 ## addresses table
 
 | Column      | Type         | Options             |
-|-------------|------------  |-------------------  |
+|-------------|--------------|---------------------|
 | code        | string       | null: false         |
 | prefecture  | string       | null: false         |
 | muni        | string       | null: false         |
