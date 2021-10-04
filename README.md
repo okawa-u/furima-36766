@@ -23,7 +23,6 @@
 | Column        | Type        | Options             |
 |---------------|-------------|---------------------|
 | name          | string      | null: false         |
-| image         | string      | null: false         |
 | explanation   | string      | null: false         |
 | category      | string      | null: false         |
 | state         | string      | null: false         |
