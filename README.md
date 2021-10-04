@@ -24,11 +24,11 @@
 |---------------|-------------|---------------------|
 | name          | string      | null: false         |
 | explanation   | string      | null: false         |
-| category      | string      | null: false         |
-| state         | string      | null: false         |
-| fee           | string      | null: false         |
-| area          | string      | null: false         |
-| date          | string      | null: false         |
+| category_id      | integer      | null: false         |
+| state_id         | integer      | null: false         |
+| fee_id           | integer      | null: false         |
+| area_id          | integer      | null: false         |
+| date_id          | integer      | null: false         |
 | price         | string      | null: false         |
 | user          | reference   | foreign_key: true   |
 
