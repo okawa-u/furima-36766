@@ -55,7 +55,7 @@
 | Column      | Type         | Options             |
 |-------------|--------------|---------------------|
 | code        | string       | null: false         |
-| area_id     | string       | null: false         |
+| area_id     | integer      | null: false         |
 | muni        | string       | null: false         |
 | address     | string       | null: false         |
 | building    | string       |                     |
