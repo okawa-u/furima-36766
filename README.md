@@ -57,7 +57,7 @@
 | area_id     | string       | null: false         |
 | muni        | string       | null: false         |
 | address     | string       | null: false         |
-| building    | string       | null: false         |
+| building    | string       |                     |
 | phone       | string       | null: false         |
 | user        | reference    | foreign_key: true   |
 
