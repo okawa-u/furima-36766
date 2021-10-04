@@ -10,7 +10,8 @@
 | Last name               | string      | null: false                  |
 | First name               | string      | null: false                  |
 | birth              | date        | null: false                  |
-| kana               | string      | null: false                  |
+| Last name kana               | string      | null: false                  |
+| First name kana               | string      | null: false                  |
 
 ### Association
 
