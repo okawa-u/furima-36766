@@ -1,24 +1,65 @@
-# README
+# DB 設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
 
-Things you may want to cover:
+| Column             | Type        | Options         |
+|--------------------|-------------|-----------------|
+| nickname           | string      | null: false     |
+| email              | string      | unique: true    |
+| encrypted_password | string      | null: false     |
+| name               | string      | null: false     |
+| birth              | string      | null: false     |
+| kana               | string      | null: false     |
 
-* Ruby version
+### Association
 
-* System dependencies
+* has_many :items
+* has_many :purchases
 
-* Configuration
+## items table
 
-* Database creation
+| Column        | Type        | Options             |
+|---------------|-------------|---------------------|
+| name          | string      | null: false         |
+| image         | string      | null: false         |
+| explanation   | string      | null: false         |
+| category      | string      | null: false         |
+| state         | string      | null: false         |
+| fee           | string      | null: false         |
+| area          | string      | null: false         |
+| date          | string      | null: false         |
+| price         | string      | null: false         |
+| user          | reference   | foreign_key: true   |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_one :purchase
 
-* Services (job queues, cache servers, search engines, etc.)
+## purchases table
 
-* Deployment instructions
+| Column      | Type         | Options              |
+|-------------|--------------|----------------------|
+| user        | reference    | foreign_key: true    |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :item
+- has_one    :address
+
+## addresses table
+
+| Column      | Type         | Options             |
+|-------------|------------  |-------------------  |
+| code        | string       | null: false         |
+| prefecture  | string       | null: false         |
+| muni        | string       | null: false         |
+| address     | string       | null: false         |
+| building    | string       | null: false         |
+| phone       | string       | null: false         |
+| user        | reference    | foreign_key: true   |
+
+### Association
+
+- belongs_to :purchase
