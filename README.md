@@ -59,7 +59,7 @@
 | address     | string       | null: false         |
 | building    | string       |                     |
 | phone       | string       | null: false         |
-| user        | reference    | foreign_key: true   |
+| order       | reference    | foreign_key: true   |
 
 ### Association
 
