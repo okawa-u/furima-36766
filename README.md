@@ -29,13 +29,13 @@
 | fee_id        | integer     | null: false         |
 | area_id       | integer     | null: false         |
 | days_id       | integer     | null: false         |
-| price         | string      | null: false         |
+| price         | type        | null: false         |
 | user          | reference   | null: false,foreign_key: true   |
 
 ### Association
 
 - belongs_to :user
-- has_one :orders
+- has_one :order
 
 ## orders table
 
@@ -64,4 +64,4 @@
 
 ### Association
 
-- belongs_to :orders
+- belongs_to :order
