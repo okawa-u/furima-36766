@@ -23,7 +23,7 @@
 | Column        | Type        | Options             |
 |---------------|-------------|---------------------|
 | name          | string      | null: false         |
-| explanation   | string      | null: false         |
+| explanation   | text        | null: false         |
 | category_id   | integer     | null: false         |
 | state_id      | integer     | null: false         |
 | fee_id        | integer     | null: false         |
