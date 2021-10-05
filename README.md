@@ -20,16 +20,16 @@
 
 ## items table
 
-| Column        | Type        | Options             |
-|---------------|-------------|---------------------|
-| name          | string      | null: false         |
-| explanation   | text        | null: false         |
-| category_id   | integer     | null: false         |
-| state_id      | integer     | null: false         |
-| fee_id        | integer     | null: false         |
-| area_id       | integer     | null: false         |
-| days_id       | integer     | null: false         |
-| price         | type        | null: false         |
+| Column        | Type        | Options                         |
+|---------------|-------------|---------------------------------|
+| name          | string      | null: false                     |
+| explanation   | text        | null: false                     |
+| category_id   | integer     | null: false                     |
+| state_id      | integer     | null: false                     |
+| fee_id        | integer     | null: false                     |
+| area_id       | integer     | null: false                     |
+| days_id       | integer     | null: false                     |
+| price         | integer     | null: false                     |
 | user          | reference   | null: false,foreign_key: true   |
 
 ### Association
@@ -39,10 +39,10 @@
 
 ## orders table
 
-| Column      | Type         | Options              |
-|-------------|--------------|----------------------|
+| Column      | Type         | Options                          |
+|-------------|--------------|----------------------------------|
 | user        | reference    | null: false,foreign_key: true    |
-| item        | reference    | null: false,foreign_key: true   |
+| item        | reference    | null: false,foreign_key: true    |
 
 ### Association
 
@@ -52,14 +52,14 @@
 
 ## addresses table
 
-| Column      | Type         | Options             |
-|-------------|--------------|---------------------|
-| code        | string       | null: false         |
-| area_id     | integer      | null: false         |
-| muni        | string       | null: false         |
-| address     | string       | null: false         |
-| building    | string       |                     |
-| phone       | string       | null: false         |
+| Column      | Type         | Options                         |
+|-------------|--------------|---------------------------------|
+| code        | string       | null: false                     |
+| area_id     | integer      | null: false                     |
+| muni        | string       | null: false                     |
+| address     | string       | null: false                     |
+| building    | string       |                                 |
+| phone       | string       | null: false                     |
 | order       | reference    | null: false,foreign_key: true   |
 
 ### Association
