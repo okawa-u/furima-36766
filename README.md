@@ -28,13 +28,8 @@
 | state_id      | integer     | null: false                     |
 | fee_id        | integer     | null: false                     |
 | area_id       | integer     | null: false                     |
-<<<<<<< Updated upstream
 | days_id       | integer     | null: false                     |
 | price         | integer     | null: false                     |
-=======
-| date_id       | integer     | null: false                     |
-| price         | integer      | null: false                     |
->>>>>>> Stashed changes
 | user          | reference   | null: false,foreign_key: true   |
 
 ### Association
