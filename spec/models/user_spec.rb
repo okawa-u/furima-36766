@@ -101,9 +101,9 @@ RSpec.describe User, type: :model do
       end
 
       it '姓（カナ）にカタカナ以外の文字（平仮名・漢字・英数字・記号）が含まれていると登録できない' do
-        @user.last_name = 'あ漢a456'
+        @user.last_name_kana = 'あ漢a456'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last name 全角文字を使用してください')
+        expect(@user.errors.full_messages).to include("Last name kana 全角文字を使用してください")
       end
 
       it '名（カナ）が空だと登録できない' do
@@ -113,15 +113,21 @@ RSpec.describe User, type: :model do
       end
 
       it '名（カナ）にカタカナ以外の文字（平仮名・漢字・英数字・記号）が含まれていると登録できない' do
-        @user.first_name = 'ぁ-ん一-龥々ーa-z'
+        @user.first_name_kana = 'あ漢a456'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name 全角文字を使用してください')
+        expect(@user.errors.full_messages).to include("First name kana 全角文字を使用してください")
       end
 
       it '生年月日が空だと登録できない' do
         @user.birth = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Birth can't be blank")
+      end
+
+      it 'メールアドレスに@を含まない場合は登録できない'do
+        @user.email = 'aaaaaa'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Email is invalid")
       end
     end
   end
