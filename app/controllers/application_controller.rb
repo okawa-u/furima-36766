@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up,keys: [:nickname, :last_name, :first_name, :birth, :last_name_kana, :first_name_kana])
+    devise_parameter_sanitizer.permit(:sign_up,
+                                      keys: [:nickname, :last_name, :first_name, :birth, :last_name_kana, :first_name_kana])
   end
 
   def basic_auth
@@ -17,5 +18,4 @@ class ApplicationController < ActionController::Base
   def item_params
     params.require(:item).permit(:content, :image).merge(user_id: current_user.id)
   end
-
 end

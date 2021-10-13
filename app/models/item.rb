@@ -15,10 +15,9 @@ class Item < ApplicationRecord
   validates :area, presence: true
   validates :days, presence: true
 
-  validates :category_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :status_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :fee_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :area_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :days_id, numericality: { other_than: 1 , message: "can't be blank"} 
-
+  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :status_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :fee_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :area_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :days_id, numericality: { other_than: 1, message: "can't be blank" }
 end
