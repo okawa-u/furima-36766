@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: "furima#index"
 
   get 'items-new', to: 'items#new'
-  resources :items
+  resources :items, only: [:index, :new, :create]
 end
