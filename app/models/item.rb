@@ -10,13 +10,14 @@ class Item < ApplicationRecord
   belongs_to :delivery_day
 
   validates :name, presence: true
+  validates :image, presence: true
   validates :explanation, presence: true
-  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :state_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :fee_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :area_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :delivery_day_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :price, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
+  validates :category_id, numericality: { other_than: 1, message: 'must be other than 1' }
+  validates :state_id, numericality: { other_than: 1, message: 'must be other than 1' }
+  validates :fee_id, numericality: { other_than: 1, message: 'must be other than 1' }
+  validates :area_id, numericality: { other_than: 1, message: 'must be other than 1' }
+  validates :delivery_day_id, numericality: { other_than: 1, message: 'must be other than 1' }
+  validates :price, presence: true,
+                    numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   validates :price, format: { with: /\A[0-9]+\z/, message: '半角数字を使用してください' }
-
 end
