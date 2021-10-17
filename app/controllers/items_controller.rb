@@ -17,6 +17,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def index
+    @item = Item.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def item_params
