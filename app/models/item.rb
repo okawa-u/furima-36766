@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   # has_one :order
   has_one_attached :image
   belongs_to :category
-  belongs_to :status
+  belongs_to :state
   belongs_to :fee
   belongs_to :area
   belongs_to :delivery_day
