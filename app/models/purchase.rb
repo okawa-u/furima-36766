@@ -7,7 +7,7 @@ class Purchase
   validates :area_id, numericality: { other_than: 0 , message: "を選択してください"}
   validates :muni
   validates :address
-  validates :phone, format: { with: /\d{10,11}/}
+  validates :phone, format: { with: /\d{10,11}/},length: { maximum: 11 }
   validates :user_id
   validates :item_id
   end
