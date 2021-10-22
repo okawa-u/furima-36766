@@ -5,6 +5,8 @@ window.addEventListener('load', () => {
      priceInput.addEventListener("input", () => {
      const inputValue = priceInput.value
      addTaxDom.innerHTML = Math.round(inputValue * 0.1 );
+
      addProfitDom.innerHTML = Math.round(inputValue * 0.9)
+    
  })
 });

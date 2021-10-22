@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   belongs_to :fee
   belongs_to :area
   belongs_to :delivery_day
-
+  has_one    :order
   validates :name, presence: true
   validates :image, presence: true
   validates :explanation, presence: true
