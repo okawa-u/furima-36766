@@ -32,6 +32,7 @@
     <%# /支払額の表示 %>
 
     <%= form_with url:item_orders_path,model:@purchase,id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%# url=パス，model=保存したいテーブル(モデル)のクラスのインスタンス，local=リモート送信無効 %>
     <%= render 'shared/error_messages', model: f.object %>
     <%# カード情報の入力 %>
     <div class='credit-card-form'>
