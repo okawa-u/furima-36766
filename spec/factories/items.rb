@@ -11,6 +11,7 @@ FactoryBot.define do
     area_id    { 2 }
     delivery_day_id   { 2 }
     price             { 11_111 }
+    # データを生成するための記述
     association :user
   end
 end

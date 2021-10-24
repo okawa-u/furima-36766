@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
           .permit(:code, :area_id, :muni, :address, :building, :phone)
           .merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
+  # order_params[:price]としてpriceの情報が、order_params[:token]としてtokenの情報を取得
 
   def pay_item
     Payjp.api_key = ENV['PAYJP_SECRET_KEY']

@@ -1,4 +1,5 @@
 <% if resource.errors.any? %>
+<%# エラーが発生したらという条件分岐 %>
   <div id="error_explanation">
     <h2>
       <%= I18n.t("errors.messages.not_saved",
@@ -8,6 +9,7 @@
     </h2>
     <ul>
       <% resource.errors.full_messages.each do |message| %>
+      <%# eachメソッドによりエラー文を一つずつブラウザ上で表示するようにしている %>
         <li><%= message %></li>
       <% end %>
     </ul>

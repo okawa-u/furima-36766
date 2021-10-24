@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     resources :orders, only: [:index, :create]
   end  
 end 
-# resources :コントローラー名
+# resources :コントローラー名 Ex.http://localhost:3000/items/newにアクセスした場合、itemsコントローラーのnewアクションが実行される
 # ネストにより，どの商品に対する注文なのかURIから判断可能にしている
