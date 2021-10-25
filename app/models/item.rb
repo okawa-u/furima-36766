@@ -13,6 +13,11 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :image, presence: true
   validates :explanation, presence: true
+  validates :category_id, presence: true
+  validates :state_id, presence: true
+  validates :fee_id, presence: true
+  validates :area_id, presence: true
+  validates :delivery_day_id, presence: true
   validates :category_id, numericality: { other_than: 1, message: 'いずれか一つお選びください' }
   validates :state_id, numericality: { other_than: 1, message: 'いずれか一つお選びください' }
   validates :fee_id, numericality: { other_than: 1, message: 'いずれか一つお選びください' }

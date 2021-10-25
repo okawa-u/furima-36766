@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
+  # Basic認証
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
@@ -15,5 +16,6 @@ class ApplicationController < ActionController::Base
     authenticate_or_request_with_http_basic do |username, password|
       username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
     end
+    # 環境変数の呼び出し　BASIC_AUTH_USERという変数に格納されている値を取得
   end
 end
