@@ -5,7 +5,7 @@ class Purchase
 
   with_options  presence: true do
     validates :code, format: { with: /\A\d{3}-\d{4}\z/ }
-    validates :area_id, numericality: { other_than: 0, message: 'を選択してください' }
+    validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :muni
     validates :address
     validates :phone, format: { with: /\d{10,11}/ }, length: { maximum: 11 }
