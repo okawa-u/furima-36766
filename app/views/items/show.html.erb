@@ -27,7 +27,7 @@
   <%# ログインしているかどうかの判定 %>
   <% if current_user.id == @item.user_id %>
     <%= link_to "商品の編集", edit_item_path, method: :get, class: "item-red-btn" %>
-    <%# <%= link_to "テキスト", "リンク先のパス" %>ボタンの実装 %>
+    <%# <%= link_to "テキスト", "リンク先のパス" ボタンの実装 %>
     <p class="or-text">or</p>
     <%= link_to "削除", item_path, method: :delete, class:"item-destroy" %>
   <% else %>
