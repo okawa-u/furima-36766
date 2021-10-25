@@ -8,6 +8,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../item");
 require("../card")
+// card.jsを読み込むための記述
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

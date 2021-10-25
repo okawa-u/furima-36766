@@ -11,6 +11,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :price
       t.references :user
       t.timestamps
+      # t.型：カラム名
+      # integer=数値
+      # references＝他のテーブルへの外部キーの定義(idが付いた整数)
     end
   end
 end

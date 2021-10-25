@@ -32,7 +32,9 @@
     <%# /支払額の表示 %>
 
     <%= form_with url:item_orders_path,model:@purchase,id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%# url=パス，model=保存したいテーブル(モデル)のクラスのインスタンス，id定義(決済のjsで使用)，class定義(CSS適用用),local=リモート送信無効 %>
     <%= render 'shared/error_messages', model: f.object %>
+    <%# 部分テンプレートの読み込み %>
     <%# カード情報の入力 %>
     <div class='credit-card-form'>
       <h1 class='info-input-haedline'>
@@ -44,6 +46,7 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :number, class:"input-default", id:"card-number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+        <%# f.HTMLタグ名 :保存先のカラム名 text_field=一行のテキスト投稿フォーム %>
         <div class='available-card'>
           <%= image_tag 'card-visa.gif', class: 'card-logo'%>
           <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
@@ -58,6 +61,7 @@
         </div>
         <div class='input-expiration-date-wrap'>
           <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"例)3" %>
+          <%# f.text_area=複数行のテキスト投稿フォーム %>
           <p>月</p>
           <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"例)23" %>
           <p>年</p>
@@ -91,6 +95,7 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"area"}) %>
+        <%# f.collection_select=データベースの情報を元に選択肢を生成 %>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
@@ -124,6 +129,7 @@
     <%# /配送先の入力 %>
     <div class='buy-btn'>
       <%= f.submit "購入" ,class:"buy-red-btn", id:"button" %>
+      <%# f.submit	送信ボタンの生成 %>
     </div>
     <% end %>
   </div>

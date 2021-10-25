@@ -13,6 +13,7 @@ RSpec.describe Item, type: :model do
           @item.name = nil
           @item.valid?
           expect(@item.errors[:name]).to include("can't be blank")
+          # エラー文はコントローラーbinding.pryで確認可能
         end
         it '商品説明がない場合は登録できないこと' do
           @item.explanation = ''
