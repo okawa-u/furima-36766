@@ -1,6 +1,7 @@
 class Purchase
   include ActiveModel::Model
   attr_accessor :code, :area_id, :muni, :address, :building, :phone, :user_id, :item_id, :token
+
   # Orderモデルで取り扱えるように
 
   with_options  presence: true do
