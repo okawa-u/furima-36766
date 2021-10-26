@@ -41,7 +41,7 @@ RSpec.describe User, type: :model do
         expect(@purchase.errors.full_messages).to include('Code is invalid')
       end
       it '都道府県、選択がない場合は登録できない' do
-        @purchase.area_id = 0
+        @purchase.area_id = 1
         @purchase.valid?
         expect(@purchase.errors.full_messages).to include('Area を選択してください')
       end

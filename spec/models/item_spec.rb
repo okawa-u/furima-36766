@@ -23,27 +23,27 @@ RSpec.describe Item, type: :model do
         it 'カテゴリーがない場合は登録できないこと' do
           @item.category_id = 1
           @item.valid?
-          expect(@item.errors[:category_id]).to include('must be other than 1')
+          expect(@item.errors[:category_id]).to include('いずれか一つお選びください')
         end
         it '配送料の負担がない場合は登録できないこと' do
           @item.fee_id = 1
           @item.valid?
-          expect(@item.errors[:fee_id]).to include('must be other than 1')
+          expect(@item.errors[:fee_id]).to include('いずれか一つお選びください')
         end
         it '配送先がない場合は登録できないこと' do
           @item.area_id = 1
           @item.valid?
-          expect(@item.errors[:area_id]).to include('must be other than 1')
+          expect(@item.errors[:area_id]).to include('いずれか一つお選びください')
         end
         it '商品の状態がなければ登録できない' do
           @item.state_id = 1
           @item.valid?
-          expect(@item.errors[:state_id]).to include('must be other than 1')
+          expect(@item.errors[:state_id]).to include('いずれか一つお選びください')
         end
         it '配送日数がない場合は登録できないこと' do
           @item.delivery_day_id = 1
           @item.valid?
-          expect(@item.errors[:delivery_day_id]).to include('must be other than 1')
+          expect(@item.errors[:delivery_day_id]).to include('いずれか一つお選びください')
         end
         it '価格がからだと登録できない' do
           @item.price = ''
