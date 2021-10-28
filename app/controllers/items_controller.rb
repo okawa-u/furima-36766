@@ -41,11 +41,13 @@ class ItemsController < ApplicationController
 
   private
 
+  # クラス外から呼び出すことのできないメソッド
   def item_params
     params.require(:item).permit(:image, :name, :explanation, :category_id, :state_id, :fee_id, :area_id, :delivery_day_id,
                                  :price).merge(user_id: current_user.id)
   end
-  # params.require(:モデル名)  取得したい情報を指定
+  # ストロングパラメーター
+  # params.require(:モデル名).permit(:キー名, :キー名)  取得したい情報を指定
 
   def contributor_confirmation
     redirect_to root_path if @item.user != current_user || !@item.order.nil?

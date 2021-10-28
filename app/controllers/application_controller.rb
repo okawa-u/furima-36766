@@ -17,5 +17,6 @@ class ApplicationController < ActionController::Base
       username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
     end
     # 環境変数の呼び出し　BASIC_AUTH_USERという変数に格納されている値を取得
+    # 環境変数を読み込む記述
   end
 end

@@ -30,3 +30,4 @@
 yarn-debug.log*
 .yarn-integrity
 .Ds_Store
+# 不要な変更履歴がGitで管理されないように
